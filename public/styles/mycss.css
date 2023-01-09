@@ -1,0 +1,57 @@
+/* this deals with the adminsection  */
+#username{
+    font-size: 15px;
+    font-weight: bolder;
+    font-family: sans-serif, ui-serif;
+
+}
+
+/*  */
+#section1{
+    margin-top: 15px;
+}
+#section2{
+    padding-top: 15px;
+}
+#section3{
+    margin-top: 15px;
+}
+#nvbr {
+    background-color: rgb(240, 61, 61);
+    width: auto;
+}
+
+#bckimg {
+    background-image: url('images/image1.png');
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#firstheading {
+    color: rgb(12, 15, 15);
+    font-family: Raleway;
+    padding: 60px;
+    font-size: 40px;
+    margin-top: 90px;
+}
+
+#img1 {
+    position: relative;
+    width: 70%;
+}
+/* card section to display */
+#menuhref{
+    text-decoration:none;
+    color: black;
+}
+#card1{
+    size: 40px;
+    color: aqua;
+    text-align: center;
+}
+#img4{
+    margin-top: 5px;
+    margin-left: 80px;
+    width: 40%;
+}
