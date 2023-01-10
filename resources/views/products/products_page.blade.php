@@ -95,7 +95,8 @@
   
     <ul class="list-group list-group-horizontal " style="margin-bottom: 10px;">
       <li class="list-group-item flex-fill justify-content-between align-items-start">
-       <p class="text-danger" id="username">USER:</p> 
+       <p class="text-danger" id="username">USER: {{ Auth::user()->name }}
+  </p> 
       </li>
       <li class="list-group-item flex-fill justify-content-between align-items-start">
       <p class="fw-bold">DATE:<span style="margin-left:10px;"><?php echo date("y-m-d")?></span></p>
@@ -109,12 +110,12 @@
     </ul>
   
     <script>
-      function updateTime() {
-      var now = new Date();
-      document.getElementById('time').innerHTML = now.toLocaleTimeString();
-      }
-      setInterval(updateTime, 1000);
-      </script>
+    function updateTime() {
+    var now = new Date();
+    document.getElementById('time').innerHTML = now.toLocaleTimeString();
+    }
+    setInterval(updateTime, 1000);
+    </script>
       
     {{-- end of the the section displaying the date and time --}} 
   <div class="row">

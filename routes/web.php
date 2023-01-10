@@ -21,7 +21,7 @@ Route::get('/', function () {
     return view('welcomepage');
 });
 Route::get('login', function(){
-return view('authentication/loginform')->middleware('auth');
+return view('authentication/loginform');
 });
 Route::get('signup', function(){
     return view('authentication/signup')->middleware('auth');
