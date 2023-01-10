@@ -101,13 +101,21 @@
       <p class="fw-bold">DATE:<span style="margin-left:10px;"><?php echo date("y-m-d")?></span></p>
       </li>
       <li class="list-group-item  justify-content-between " style="margin-right: -28px;">
-      <p class="fw-bold text-danger">Time:<span style="padding-left:10px;"><?php 
+      <p class="fw-bold text-danger" id="time">Time:<span style="padding-left:10px;"><?php 
         date_default_timezone_set('Asia/Kolkata');
         echo $runningTime =date('h:i:s');
        ?></span></p>
       </li>
     </ul>
   
+    <script>
+      function updateTime() {
+      var now = new Date();
+      document.getElementById('time').innerHTML = now.toLocaleTimeString();
+      }
+      setInterval(updateTime, 1000);
+      </script>
+      
     {{-- end of the the section displaying the date and time --}} 
   <div class="row">
 <div class="col-md-4 col-xs-12">

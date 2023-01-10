@@ -51,7 +51,7 @@ class Product extends Controller
 
                 products::create($request->all());
                 //redirect user and send friendly messgae
-                return redirect()->route('product.index')->with('success','products saved successfully');
+                return redirect()->route('product.index')->with('success','product saved successfully');
     }
 
     /**
