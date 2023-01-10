@@ -5,7 +5,7 @@ use App\Http\Controllers\products;
 use App\Http\Controllers\category;
 use App\Http\Controllers\Product;
 use App\Http\Controllers\sales;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\usersController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -51,6 +51,7 @@ Route::resource('category', category::class)->middleware('auth');
 Route::resource('product', Product::class)->middleware('auth');
 Route::resource('product', Product::class)->middleware('auth');
 Route::resource('sales', sales::class)->middleware('auth');
+Route::resource('users',userscontroller::class);
 
 Auth::routes();
 
