@@ -21,13 +21,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav  mb-2 mb-lg-0">
-              <span class="material-icons" style="padding-top:7px; color:white;">
-                login
-                </span>
-              <li class="nav-item">
-                <a class="nav-link active text-white" aria-current="page" href="login">Login</a>
-              </li>
+
           </div>
         </div>
       </nav>
@@ -36,11 +30,15 @@
           <div class="row" id="bckimg">
                   <div class="col-6">
                       <p id="firstheading">Welcome to the chillaxManager, making product management easy.</p>
-                  </div>
+                      <div class="container" style="margin-left:40px;">
+                        <a href="login"><button class="btn btn-danger " style="padding:15px;;">Click here to continue</button></a>
+                      </div>
+                    </div>
                   <div class="col-6">
           <img src="images/image2.png" alt="cart" id='img1'>
                   </div>
               </div>
+
           </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
