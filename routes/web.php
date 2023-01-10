@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\products;
 use App\Http\Controllers\category;
 use App\Http\Controllers\Product;
+use App\Http\Controllers\sales;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -48,3 +49,5 @@ Route::resource('home1', testing::class);
 Route::resource('products', products::class);
 Route::resource('category', category::class);
 Route::resource('product', Product::class);
+Route::resource('product', Product::class);
+Route::resource('sales', sales::class);

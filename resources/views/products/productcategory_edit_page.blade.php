@@ -1,3 +1,6 @@
+<?php
+use App\Models\categories;
+?>
 @extends('navbar_registerd_users')
 @section('content')
 @if ($errors->any())

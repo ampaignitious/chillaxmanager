@@ -42,7 +42,6 @@ use App\Models\categories;
             <select id="measurement" name="measurement" class="form-select">
       <?php
         $categories = categories::all();
-        var_dump($categories);
         ?>
         @foreach ($categories as $item)
         <option value="{{$item->measure}}">{{$item->measure}}</option>

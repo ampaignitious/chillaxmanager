@@ -1,4 +1,6 @@
-
+<?php
+use App\Models\categories;
+?>
 @extends('navbar_registerd_users')
 @section('content')
 <div class="border">
@@ -39,6 +41,12 @@
             <label for="measurement" class="form-label">measurement</label>
             <select id="measurement" name="measurement" class="form-select">
         <option value="{{$product->measurement}}">{{$product->measurement}}</option>
+        <?php
+        $categories = categories::all();
+        ?>
+        @foreach ($categories as $item)
+        <option value="{{$item->measure}}">{{$item->measure}}</option>
+        @endforeach
             </select>
         </div>
         <div class="col" style="padding-bottom:20px;">
@@ -46,6 +54,12 @@
             <select id="category" name="category" class="form-select">
               <option value="{{$product->category}}">{{$product->category}}</option>
               {{-- make sure you dont display null values , implement an if here --}}
+              <?php
+              $categories = categories::all();
+              ?>
+              @foreach ($categories as $item)
+              <option value="{{$item->measure}}">{{$item->measure}}</option>
+              @endforeach
             </select>
         </div>
     </div>

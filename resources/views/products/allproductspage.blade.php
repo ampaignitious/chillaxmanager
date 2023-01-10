@@ -98,7 +98,7 @@
   {{-- this sectin deals with alerts --}}
   <div class="container-fluid">
     @if ($errors->any())
-<div class="alert alert-danger">
+<div class="alert alert-danger" id="alert" role="alert">
    <p>Details not saved</p>
     <ul>
         @foreach ($errors->all() as $error)
@@ -108,10 +108,21 @@
 </div>
 @endif
 @if ($message = Session::get('success'))
-<div class="alert alert-success">
+<div class="alert alert-success" id="alert" role="alert">
     <p class="text-success">{{ $message}}</p>
 </div>
 @endif
+
+<script>
+function showAlert() {
+  var alert = document.getElementById('alert');
+  alert.style.display = 'block';
+  setTimeout(function() {
+    alert.style.display = 'none';
+  }, 3000);
+}
+</script>
+
 {{-- end of the alerts section --}}
 
 
@@ -148,7 +159,19 @@
                         <td><a class="btn border btn-secondary" href="{{ route('product.edit', $item->id)}}" >Edit</a></td>
                         @csrf
                         @method('DELETE')
-                        <td><button type="submit" class="btn btn-danger">Delete</button></td>
+                        <td><button type="submit" class="btn btn-danger delete-btn">Delete</button></td>
+                        <script>
+                          $(document).ready(function() {
+                            $('.delete-btn').click(function(e) {
+                              e.preventDefault();
+                              if (confirm('Are you sure you want to delete this item?')) {
+                                // If the user clicks "OK", submit the form to delete the item
+                                $(this).closest('form').submit();
+                              }
+                            });
+                          });
+                        </script>
+                        
                         </form>
                     </tr>
                     @endforeach

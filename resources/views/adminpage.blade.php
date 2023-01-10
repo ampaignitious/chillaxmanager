@@ -135,10 +135,12 @@
 </div>
 <div class="col-md-3 col-xs-12">
   <div class="card" style="width: 18rem;">
-    <img src="images/image6.png" class="card-img-top" alt="..." id="img4">
-    <div class="card-body">
-      <h5 class="card-title text-center">Sales</h5>
-    </div>
+    <a href="{{route('sales.index')}}" id="menuhref">
+      <img src="images/image6.png" class="card-img-top" alt="..." id="img4">
+      <div class="card-body">
+        <h5 class="card-title text-center">Sales</h5>
+      </div>
+    </a>
   </div>
 </div>
 <div class="col-md-3 col-xs-12">
