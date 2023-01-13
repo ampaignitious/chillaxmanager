@@ -164,7 +164,7 @@
                             $(document).ready(function() {
                               $('.delete-btn').click(function(e) {
                                 e.preventDefault();
-                                if (confirm('Are you sure you want to delete this item?')) {
+                                if (confirm('Do you want to delete the item?')) {
                                   // If the user clicks "OK", submit the form to delete the item
                                   $(this).closest('form').submit();
                                 }
