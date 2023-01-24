@@ -16,80 +16,91 @@
     <title>ChillxDelivery</title>
   </head>
   <body>
-  <!--navbar-->
-  <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="nvbr">
-    <div class="container-fluid">
-      <a class="navbar-brand text-white" href="/">Admin Section </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <ul class="navbar-nav  mb-2 mb-lg-0">
-          <span class="material-icons" style="padding-top:7px; color:white;">
-            home
-            </span>
+
+ <!--navbar-->
+ <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="nvbr">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="/">
+      Admin Section </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav  mb-2 mb-lg-0">
+        <span class="material-icons" style="padding-top:7px; color:white;">
+          home
+          </span>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="adminpage">Home</a>
+        </li>
+        <span class="material-icons" style="padding-top:7px; color:white;">
+          store
+          </span>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Products
+          </a>
+          <ul class="dropdown-menu me-auto" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="registerproduct">Add product</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="{{ route('category.index') }}">Add category</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="products">View products</a></li>
+            <li><hr class="dropdown-divider"></li> 
+            <li><a class="dropdown-item" href="products">Graphs</a></li>
+          </ul>
+        </li>
+        <span class="material-icons" style="padding-top:7px; color:white;">
+          sell
+          </span>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Sales
+          </a>
+          <ul class="dropdown-menu me-auto" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">View sales</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Graphs</a></li>
+          </ul>
+        </li>
+        <span class="material-icons" style="padding-top:7px; color:white;">
+          manage_accounts
+          </span>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Users
+          </a>
+          <ul class="dropdown-menu me-auto" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Add user</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Delete user</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">View users</a></li>
+          </ul>
+        </li>
+        <span class="material-icons" style="padding-top:7px; color:white;">
+          logout
+          </span>
           <li class="nav-item">
-            <a class="nav-link text-white" href="adminpage">Home</a>
-          </li>
-          <span class="material-icons" style="padding-top:7px; color:white;">
-            store
-            </span>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Products
-            </a>
-            <ul class="dropdown-menu me-auto" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="registerproduct">Add product</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="{{ route('category.index') }}">Add category</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="products">View products</a></li>
-              <li><hr class="dropdown-divider"></li> 
-              <li><a class="dropdown-item" href="products">Graphs</a></li>
-            </ul>
-          </li>
-          <span class="material-icons" style="padding-top:7px; color:white;">
-            sell
-            </span>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Sales
-            </a>
-            <ul class="dropdown-menu me-auto" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">View sales</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Graphs</a></li>
-            </ul>
-          </li>
-          <span class="material-icons" style="padding-top:7px; color:white;">
-            manage_accounts
-            </span>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-             Users
-            </a>
-            <ul class="dropdown-menu me-auto" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Add user</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Delete user</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">View users</a></li>
-            </ul>
-          </li>
-          <span class="material-icons" style="padding-top:7px; color:white;">
-            logout
-            </span>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="signup">Logout</a>
-          </li>
-        </ul>
-        {{-- <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form> --}}
-      </div>
+          <a class="dropdown-item text-white" href="{{ route('logout') }}" style="padding-top:8px; background:none;"
+          onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+           {{ __('Logout') }}
+         </a>
+
+       <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+           @csrf
+       </form>
+      </li>
+      </ul>
+      {{-- <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form> --}}
     </div>
-  </nav>
+  </div>
+</nav>
+
 
 
   <!--End of admin navigation bar -->

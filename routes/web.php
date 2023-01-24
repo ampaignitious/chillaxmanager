@@ -29,9 +29,6 @@ Route::get('signup', function(){
 Route::get('adminpage', function(){
         return view('adminpage');
         })->middleware('auth');
-Route::get('registerproduct', function(){
-        return view('products/registerproducts')->middleware('auth');
-        });
 Route::get('registercategory', function(){
         return view('products/productcategory');
         })->middleware('auth');
@@ -40,6 +37,9 @@ Route::get('productsection', function(){
         })->middleware('auth');
 Route::get('productgraphs', function(){
         return view('products/graphs');
+        })->middleware('auth');
+Route::get('registerproducts', function(){
+        return view('products/registerproducts');
         })->middleware('auth');
 // Route::get('availableproducts', function(){
 //         return view('products/allproductspage');

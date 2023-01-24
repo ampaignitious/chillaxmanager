@@ -13,11 +13,11 @@
     <title>ChillxDelivery</title>
   </head>
   <body>
-  <!--navbar-->
-  <!--navbar-->
-  <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="nvbr">
+   <!--navbar-->
+   <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="nvbr">
     <div class="container-fluid">
-      <a class="navbar-brand text-white" href="/">Admin Section </a>
+      <a class="navbar-brand text-white" href="/">
+        Admin Section </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -77,9 +77,17 @@
           <span class="material-icons" style="padding-top:7px; color:white;">
             logout
             </span>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="signup">Logout</a>
-          </li>
+            <li class="nav-item">
+            <a class="dropdown-item text-white" href="{{ route('logout') }}" style="padding-top:8px; background:none;"
+            onclick="event.preventDefault();
+                          document.getElementById('logout-form').submit();">
+             {{ __('Logout') }}
+           </a>
+
+         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+             @csrf
+         </form>
+        </li>
         </ul>
         {{-- <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -121,7 +129,7 @@
   <div class="row">
 <div class="col-md-4 col-xs-12">
   <div class="card" style="width: 18rem;">
-    <a href="registerproduct" id="menuhref">
+    <a href="registerproducts" id="menuhref">
  <img src="images/image4.png" class="card-img-top" alt="..." id="img4">
     <div class="card-body">
       <h5 class="card-title text-center">Add products</h5>
