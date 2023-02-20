@@ -157,7 +157,7 @@
                         <td>{{$item->email}}</td>
                         <form action="{{ route('product.destroy', $item->id)}}" method="POST">
                           {{-- <td><a  class="btn border" href="{{ route('category.show', $units->id)}}">Show</a></td> --}}
-                          <td><a class="btn border btn-secondary" href="{{ route('product.edit', $item->id)}}" >Edit</a></td>
+                          <td><a class="btn border btn-secondary" href="{{ route('users.edit', $item->id)}}" >Edit</a></td>
                           @csrf
                           @method('DELETE')
                           <td><button type="submit" class="btn btn-danger delete-btn">Delete</button></td>
